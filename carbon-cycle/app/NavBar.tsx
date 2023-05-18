@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router'
 import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack, rem } from '@mantine/core';
 import {
   IconHome2,
@@ -55,16 +56,11 @@ function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
 }
 
 const mockdata = [
-  { icon: IconHome2, label: 'Home' },
-  { icon: IconGauge, label: 'Dashboard' },
-  { icon: IconDeviceDesktopAnalytics, label: 'Analytics' },
-  { icon: IconCalendarStats, label: 'Releases' },
-  { icon: IconUser, label: 'Account' },
-  { icon: IconFingerprint, label: 'Security' },
-  { icon: IconSettings, label: 'Settings' },
+  { icon: IconHome2, label: 'Fast Carbon Cycle', click: () => {alert('clicked')} },
 ];
 
 export function NavbarMinimal() {
+  const router = useRouter()
   const [active, setActive] = useState(2);
 
   const links = mockdata.map((link, index) => (
@@ -72,7 +68,10 @@ export function NavbarMinimal() {
       {...link}
       key={link.label}
       active={index === active}
-      onClick={() => setActive(index)}
+      onClick={() => {
+        setActive(index)
+        link.click
+      }}
     />
   ));
 
