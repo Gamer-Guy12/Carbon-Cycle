@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from 'react';
 import { useRouter } from 'next/router'
 import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack, rem } from '@mantine/core';
