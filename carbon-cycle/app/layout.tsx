@@ -7,11 +7,6 @@ import Navigator from "./Navigator"
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'Carbon Cycle',
-  description: 'This is about the carbon cycle',
-}
-
 export default function RootLayout({
   children,
 }: {

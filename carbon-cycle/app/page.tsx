@@ -1,6 +1,9 @@
+import Head from 'next/head'
+
 export default function Home() {
   return (
     <>
+    
       <div>
         <h1 style={{textAlign: "center"}}>The Carbon Cycles</h1>
         <br/>
