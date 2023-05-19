@@ -7,6 +7,7 @@ export default function SlowCarbon() {
             <Head>
                 <title>Slow Carbon Cycle</title>
             </Head>
+            
         </>
     );
 

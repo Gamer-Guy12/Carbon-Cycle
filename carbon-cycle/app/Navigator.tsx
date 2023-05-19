@@ -56,12 +56,11 @@ function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
   );
 }
 
-const mockdata = [
-  { icon: Slow, label: 'Slow Carbon Cycle', click: () => {alert('clicked')} },
-];
-
 export default function NavbarMinimal() {
   const router = useRouter()
+  const mockdata = [
+    { icon: Slow, label: 'Slow Carbon Cycle', click: () => {router.push("/Slow-Carbon-Cycle")} },
+  ];
   const [active, setActive] = useState(2);
 
   const links = mockdata.map((link, index) => (
