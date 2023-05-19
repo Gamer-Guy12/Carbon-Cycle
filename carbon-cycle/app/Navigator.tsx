@@ -12,6 +12,7 @@ import {
   IconLogout,
   IconSwitchHorizontal,
 } from '@tabler/icons-react';
+import Slow from "./arrow-right.svg"
 import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
@@ -56,10 +57,10 @@ function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
 }
 
 const mockdata = [
-  { icon: IconHome2, label: 'Fast Carbon Cycle', click: () => {alert('clicked')} },
+  { icon: Slow, label: 'Slow Carbon Cycle', click: () => {alert('clicked')} },
 ];
 
-export function NavbarMinimal() {
+export default function NavbarMinimal() {
   const router = useRouter()
   const [active, setActive] = useState(2);
 
@@ -83,12 +84,6 @@ export function NavbarMinimal() {
       <Navbar.Section grow mt={50}>
         <Stack justify="center" spacing={0}>
           {links}
-        </Stack>
-      </Navbar.Section>
-      <Navbar.Section>
-        <Stack justify="center" spacing={0}>
-          <NavbarLink icon={IconSwitchHorizontal} label="Change account" />
-          <NavbarLink icon={IconLogout} label="Logout" />
         </Stack>
       </Navbar.Section>
     </Navbar>
