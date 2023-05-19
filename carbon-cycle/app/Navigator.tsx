@@ -14,6 +14,7 @@ import {
 } from '@tabler/icons-react';
 import Slow from "./arrow-right.svg"
 import { MantineLogo } from '@mantine/ds';
+import SlowQuestion from './help-circle.svg'
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -60,6 +61,7 @@ export default function NavbarMinimal() {
   const router = useRouter()
   const mockdata = [
     { icon: Slow, label: 'Slow Carbon Cycle', click: () => {router.push("/Slow-Carbon-Cycle")} },
+    { icon: SlowQuestion, label: 'Questions for the slow carbon cycle', click: () => {router.push('/Slow-Carbon-Cycle-Test')}}
   ];
   const [active, setActive] = useState(2);
 
